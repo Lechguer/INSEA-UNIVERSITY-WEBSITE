@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: #0b0b0b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🔥 WRAPPER CENTRAGE */
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* 🔥 MAIN CARD (LA BOITE PRINCIPALE) */
+.card {
+    width: 1990px;
+    height: 920px;
+    background: #111;
+    border-radius: 50px;
+
+    display: flex;
+    overflow: hidden;
+
+    /* OMBRE IMPORTANTE */
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+.logo {
+    position: absolute;
+    top: 100px;
+    left: 220px;
+    width: 200px; /* ajuste la taille */
+}
+/* LEFT */
+.left {
+    width: 40%;
+    padding: 350px 80px 80px 80px;
+    color: white;
+}
+
+.left h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.left p {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+/* INPUT */
+.input-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #444;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+
+.input-box label {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    color: #777;
+    transition: 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -10px;
+    font-size: 12px;
+    color: #023d26;
+}
+
+/* PASSWORD ICON */
+.password-box span {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    cursor: pointer;
+}
+
+/* LINKS */
+.forgot {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #888;
+    text-decoration: none;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 13px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(135deg, #023d26, #1f8e78);
+    color: white;
+    cursor: pointer;
+}
+
+/* SIGNUP */
+.signup {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* RIGHT */
+.right {
+    width: 60%;
+    position: relative;
+    background: linear-gradient(135deg, #023d26, #1f8e78);
+}
+
+/* 🔥 INNER LIGHT EFFECT */
+.right::after {
+    content: "";
+    position: absolute;
+    inset: 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+}
+
+/* TEXT */
+.right-content {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    color: white;
+    z-index: 2;
+}
+
+.right-content h1 {
+    font-size: 46px;
+}
+
+.right-content p {
+    margin-top: 10px;
+}
+
+/* IMAGE */
+.illustration {
+    position: absolute;
+    bottom: 50;
+    
+    right: px;
+    width: 1000px;
+    z-index: 2;
+}
