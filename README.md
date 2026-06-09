@@ -62,11 +62,11 @@ All text lives in a translation dictionary with two versions, French and Arabic,
 
 | Home — French | Home — Arabic (right-to-left) |
 |:---:|:---:|
-| ![Home FR](ScreenShor/Capture-d'écran-2026-06-09-182055r.png) | ![Home AR](ScreenShor/Capture-d'écran-2026-06-09-182145.png) |
+| ![Home FR](assets/screenshots/home-fr.png) | ![Home AR](assets/screenshots/home-ar.png) |
 
 | Dark mode | Programs section |
 |:---:|:---:|
-| ![Dark mode](ScreenShot/Capture-d'écran-2026-06-09-183033.png) | ![Programs](ScreenShot/Capture-d'écran-2026-06-09-182259.png) |
+| ![Dark mode](assets/screenshots/dark-mode.png) | ![Programs](assets/screenshots/programs.png) |
 
 ## Author
 
