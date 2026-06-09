@@ -26,7 +26,7 @@ PHP · HTML5 · CSS3 · JavaScript (vanilla). Fonts: [DM Sans](https://fonts.goo
 ## Project structure
 
 ```
-insea-site/
+Page_principale/
 ├── home.php          # Main page (FR/AR, sessions, translation dictionary)
 ├── styles/           # One CSS file per area (navbar, marquee, sections, cards, footer, base)
 ├── JS/               # navbar, footer, sections, cards
