@@ -46,7 +46,7 @@ Requires PHP 7.4 or newer.
 **With XAMPP**
 1. Put the project in the `htdocs` folder.
 2. Start **Apache**.
-3. Open `http://localhost/insea-site/home.php`.
+3. Open `http://localhost/Insea/Page_principale/home.php`.
 
 **With PHP's built-in server**
 ```bash
