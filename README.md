@@ -60,10 +60,13 @@ All text lives in a translation dictionary with two versions, French and Arabic,
 
 ## Screenshots
 
-<!-- Add your images to assets/screenshots/ and uncomment:
-![Home (FR)](assets/screenshots/home-fr.png)
-![Home (AR)](assets/screenshots/home-ar.png)
--->
+| Home — French | Home — Arabic (right-to-left) |
+|:---:|:---:|
+| ![Home FR](ScreenShor/Capture-d'écran-2026-06-09-182055r.png) | ![Home AR](ScreenShor/Capture-d'écran-2026-06-09-182145.png) |
+
+| Dark mode | Programs section |
+|:---:|:---:|
+| ![Dark mode](ScreenShot/Capture-d'écran-2026-06-09-183033.png) | ![Programs](ScreenShot/Capture-d'écran-2026-06-09-182259.png) |
 
 ## Author
 
