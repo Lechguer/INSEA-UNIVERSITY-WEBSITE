@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #0b0b0b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+/* WRAPPER */
+.wrapper { width: 100%; display: flex; justify-content: center; }
+
+/* CARTE */
+.card {
+    width: min(900px, 90vw);
+    height: min(540px, 82vh);
+    background: #111;
+    border-radius: 26px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+}
+
+/* GAUCHE — logo + formulaire centrés */
+.left {
+    width: 42%;
+    padding: clamp(32px, 4vw, 52px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* LOGO — centré horizontalement au-dessus du titre */
+.logo-link { align-self: center; margin-bottom: 22px; }
+.logo { width: 90px; display: block; }
+
+.left h1 { font-size: clamp(24px, 3vw, 30px); margin-bottom: 6px; text-align: center; }
+.left > p { color: #888; font-size: 14px; margin-bottom: 32px; text-align: center; }
+
+/* CHAMPS */
+.input-box { position: relative; margin-bottom: 26px; }
+.input-box input {
+    width: 100%;
+    padding: 11px 0;
+    border: none;
+    border-bottom: 1px solid #444;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+.input-box label {
+    position: absolute;
+    top: 11px;
+    left: 0;
+    color: #777;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -11px;
+    font-size: 11px;
+    color: #2fa870;
+}
+.input-box input:focus { border-bottom-color: #2fa870; }
+
+/* ICÔNE MOT DE PASSE */
+.password-box .toggle {
+    position: absolute;
+    right: 0;
+    top: 9px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 15px;
+}
+
+/* BOUTON */
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 22px;
+    border: none;
+    background: linear-gradient(135deg, #023d26, #1f8e78);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.25s, transform 0.15s;
+}
+button:hover { opacity: 0.92; }
+button:active { transform: scale(0.99); }
+
+/* DROITE — image propre, sans texte ni voile */
+.right {
+    width: 58%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #023d26, #1f8e78);
+}
+
+/* IMAGE — remplit le panneau, centrée, sans déformation */
+.illustration {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 820px) {
+    .card { flex-direction: column; height: auto; max-height: 92vh; width: 94vw; }
+    .left, .right { width: 100%; }
+    .right { height: 200px; order: -1; }
+    .left { padding: 36px 28px; }
+    .logo { width: 78px; }
+}

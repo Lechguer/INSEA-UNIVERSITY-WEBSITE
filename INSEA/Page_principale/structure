@@ -1,0 +1,39 @@
+/INSEA
+│
+├── index.html
+│
+├── formations/
+│   ├── cycle.html
+│   ├── masters.html
+│   ├── doctorat.html
+│   └── formation-continue.html
+│
+├── admissions/
+│   ├── candidature.html
+│   ├── concours.html
+│   ├── internationaux.html
+│   └── faq.html
+│
+├── recherche/
+│   ├── laboratoires.html
+│   ├── publications.html
+│   └── projets.html
+│
+├── vie-etudiante/
+│   ├── associations.html
+│   ├── clubs.html
+│   ├── logement.html
+│   └── evenements.html
+│
+├── carrieres/
+│   ├── stages.html
+│   ├── emplois.html
+│   └── alumni.html
+│
+├── actualites/
+│   ├── news.html
+│   └── agenda.html
+│
+├── styles/
+├── JS/
+└── images/

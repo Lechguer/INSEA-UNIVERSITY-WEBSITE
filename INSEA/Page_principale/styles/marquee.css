@@ -1,0 +1,214 @@
+/* ================================================================
+   INSEA – PARTENAIRES LOGO MARQUEE
+   ================================================================ */
+
+.marquee-section {
+  position: relative;
+  padding: 64px 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0)
+    ),
+    var(--nav-bg);
+
+  border-top: 1px solid var(--nav-border);
+  border-bottom: 1px solid var(--nav-border);
+  overflow: hidden;
+}
+
+/* subtle glow */
+.marquee-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center,
+      rgba(94,203,150,0.08),
+      transparent 65%);
+  pointer-events: none;
+}
+
+.marquee-section .section-label {
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--logo-accent);
+  margin-bottom: 38px;
+  opacity: 0.9;
+}
+
+/* ================================================================
+   WRAPPER
+   ================================================================ */
+
+.marquee-wrapper {
+  --marquee-size: clamp(8rem, 6rem + 12vw, 13rem);
+  --marquee-gap: clamp(1rem, 2vw, 2rem);
+  --marquee-duration: 42s;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--marquee-gap);
+  position: relative;
+}
+
+/* ================================================================
+   TRACK
+   ================================================================ */
+
+.marquee {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--marquee-gap);
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.marquee__group {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--marquee-gap);
+
+  min-width: max-content;
+
+  animation: scroll-x var(--marquee-duration) linear infinite;
+}
+
+.marquee--reverse .marquee__group {
+  animation-direction: reverse;
+}
+
+@keyframes scroll-x {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--marquee-gap)));
+  }
+}
+
+/* pause on hover */
+.marquee:hover .marquee__group {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__group {
+    animation: none;
+  }
+}
+
+/* ================================================================
+   LOGO CARD
+   ================================================================ */
+
+.marquee svg {
+  width: var(--marquee-size);
+  aspect-ratio: 16 / 9;
+
+  display: grid;
+  place-items: center;
+
+  padding: calc(var(--marquee-size) / 11);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.9),
+      rgba(248,250,248,0.95)
+    );
+
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 18px;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 4px 14px rgba(13,61,43,0.06),
+    0 1px 2px rgba(13,61,43,0.04);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+/* elegant hover */
+.marquee svg:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(94,203,150,0.35);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,1),
+      rgba(245,255,250,1)
+    );
+
+  box-shadow:
+    0 10px 28px rgba(13,61,43,0.12),
+    0 2px 6px rgba(13,61,43,0.06);
+}
+
+/* logo image */
+.marquee svg image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.88;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.marquee svg:hover image {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/* ================================================================
+   SECOND ROW
+   ================================================================ */
+
+.marquee-wrapper .marquee:nth-child(2) {
+  margin-top: 4px;
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+
+@media (max-width: 768px) {
+  .marquee-section {
+    padding: 48px 0;
+  }
+
+  .marquee-wrapper {
+    --marquee-size: 8.5rem;
+    --marquee-gap: 1rem;
+    --marquee-duration: 28s;
+  }
+
+  .marquee svg {
+    border-radius: 14px;
+  }
+}
