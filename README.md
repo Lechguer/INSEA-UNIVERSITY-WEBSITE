@@ -21,7 +21,6 @@ Sa particularité est d'être **entièrement bilingue, français et arabe**. En 
 
 ## Captures d'écran
 
-> Ajoutez vos propres captures dans un dossier `assets/screenshots/`, puis décommentez les lignes ci-dessous.
 
 <!--
 | Accueil (FR) | Accueil (AR — droite à gauche) |
